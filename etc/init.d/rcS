@@ -1,9 +1,12 @@
 #!/bin/sh
 
-
 # Start all init scripts in /etc/init.d
 # executing them in numerical order.
 #
+echo This is rcS
+ls -al /etc
+echo ls Done.
+
 for i in /etc/init.d/S??* ;do
 
      # Ignore dangling symlinks (if any).
@@ -25,3 +28,4 @@ for i in /etc/init.d/S??* ;do
     esac
 done
 
+echo rcS done
